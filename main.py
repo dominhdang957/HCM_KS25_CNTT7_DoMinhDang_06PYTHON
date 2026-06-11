@@ -135,7 +135,15 @@ Nhập lựa chọn(1-8):  """)
             if found:
                 print("Không tìm thấy mã BK này!")
         case "5":
-            pass
+            search_id_bk = input("Nhập vào Mã BK cần tìm: ").strip().upper()
+            found = True
+            for i in range(len(information_book)):
+                    if information_book[i]['id'] == search_id_bk:
+                        display_booking(information_book)
+                        found = False
+                        break
+            if found:
+                print("Không tìm thấy mã BK này!")
         case "6":
             pass
         case "7":
